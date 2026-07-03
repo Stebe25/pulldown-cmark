@@ -1598,7 +1598,7 @@ impl<'a, 'b> FirstPass<'a, 'b> {
     /// Appends a line of HTML to the tree.
     fn append_html_line(&mut self, remaining_space: usize, start: usize, end: usize) {
         if remaining_space > 0 {
-            let cow_ix = self.allocs.allocate_cow("   "[..remaining_space].into());
+            let cow_ix = self.allocs.allocate_cow("    "[..remaining_space].into());
             self.tree.append(Item {
                 start,
                 end: start,
