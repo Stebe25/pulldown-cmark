@@ -388,12 +388,14 @@ impl<'a, 'b> FirstPass<'a, 'b> {
         let remaining_space = line_start.remaining_space();
 
         let indent = line_start.scan_space_upto(4);
+        /*
         if indent == 4 {
             self.finish_list(start_ix);
             let ix = start_ix + line_start.bytes_scanned();
             let remaining_space = line_start.remaining_space();
             return self.parse_indented_code_block(ix, remaining_space);
         }
+        */
 
         let ix = start_ix + line_start.bytes_scanned();
 
@@ -1432,7 +1434,8 @@ impl<'a, 'b> FirstPass<'a, 'b> {
         self.pop(end_ix);
         ix
     }
-
+    
+    #[allow(unused)]
     fn parse_indented_code_block(&mut self, start_ix: usize, mut remaining_space: usize) -> usize {
         self.tree.append(Item {
             start: start_ix,
