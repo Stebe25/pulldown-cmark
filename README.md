@@ -1,3 +1,7 @@
+No indented code blocks.
+
+
+
 # pulldown-cmark
 
 [![Tests](https://github.com/pulldown-cmark/pulldown-cmark/actions/workflows/rust.yml/badge.svg)](https://github.com/pulldown-cmark/pulldown-cmark/actions/workflows/rust.yml)
